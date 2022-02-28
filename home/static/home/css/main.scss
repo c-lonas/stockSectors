@@ -1,0 +1,212 @@
+$primary-color: rgba(44, 42, 39, 0.85);
+$secondary-color: '';
+$tertiary-color: '';
+$accent-color: rgb(241, 255, 41);
+
+
+$plotly-width: 500;
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url("/static/chicago-bg.jpg");
+    background-size: cover;
+    color: rgb(7, 0, 0);
+    font-family: "Raleway", "sans-serif";
+}
+
+header {
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    font-size: 2em;
+    padding: 1rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.info-container {
+    margin-left: 2rem;
+}
+
+.content-wrapper {
+    position: relative;
+    margin: auto 2rem;
+}
+
+
+.main-content {
+    display: flex;
+    margin-top: 3rem;
+}
+
+// .main-svg {
+//     width: 1000px;
+//     height: 600px;
+// }
+
+// .graph {
+//     width: 1000px;
+//     height: 600px;
+
+// }
+
+.sidebar-nav {
+    background-color: $primary-color;
+    margin-top: 20px;
+    padding: 2rem;
+    list-style: none;
+    width: fit-content;
+    height: 41rem;
+    box-shadow: 5px 12px 10px rgb(12, 9, 6);
+
+
+    li {
+        font-size: 1.5em;
+        margin-bottom: 2rem;
+        transition: .5s;
+    
+        a {
+            color: $accent-color;
+        }
+    }
+    li:hover {
+        transform: translateX(10px);
+        text-shadow: 0 0 10px rgb(241, 255, 41);
+        transition: .5s ;
+
+    }
+}
+
+.graph-container {
+    height: fit-content;
+    min-width: fit-content;
+    margin: auto;
+    box-shadow: 5px 12px 10px rgb(12, 9, 6);
+}
+
+
+#overlay {
+    background: rgba(0, 0, 0, 0.88);
+    display: none;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#tutorial {
+    cursor: pointer;
+}
+
+.exit-btn {
+    width: 7rem;
+    height: 7rem;
+    background-image: url("/static/x-octagon.svg");
+    background-repeat: no-repeat;
+    margin: 2rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.esc-txt {
+    font-size: 1.5em;
+    position: absolute;
+    color: white;
+    top: 75px;
+    right: 40px;
+}
+
+.tip-container {
+    margin: 5rem;
+    display: flex;
+    height: 30vh;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tips {
+    font-size: 3.5em;
+    color: white;
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .main-content {
+        flex-direction: column-reverse;
+    }
+
+    .sidebar-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        height: fit-content;
+        width: 400px;
+        padding: .5rem;
+    }
+
+    .main-svg {
+        width: 400px;
+        height: 325px;
+    }
+
+    .graph {
+        width: 400px;
+        height: 325px;
+
+    }
+
+
+
+    .esc-txt {
+        display: none;
+    }
+
+    .tip-container {
+        margin-left: 2rem;
+        max-width: 385px;
+    }
+
+    .tips {
+        font-size: 1.5em;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    // .main-svg {
+    //     width: 1000px;
+    //     height: 600px;
+    // }
+    //  .graph {
+    //     width: 1000px;
+    //     height: 600px;
+    // }
+
+}

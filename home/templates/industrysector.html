@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="graph-container">
+  <div class="graph">
+    {% if IndustryFigure %}
+    {{ IndustryFigure | safe }}
+    {% else %}
+    <p>Sorry, could not load graph :(</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
