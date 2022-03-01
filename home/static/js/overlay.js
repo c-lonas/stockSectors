@@ -50,15 +50,6 @@ function startTutorial() {
 };
 
 
-function highlightLegend(){
-
-    // Doesn't work on child objects I guess?
-    highlightObj = document.getElementsByClassName("legend")[0];
-    console.log(highlightObj);
-    jQuery(highlightObj).css({'position': 'relative', 'z-index': "100"});
-
-}
-
 function exitTutorial() {
     let keyName = event.key;
     if (keyName === "Escape") {
@@ -66,6 +57,7 @@ function exitTutorial() {
         // overlay.setAttribute("style", "display: none");
         document.removeEventListener("keyup", exitTutorial);
         exitBtn.remove();
+        tipDiv.remove();
         console.log("exited tutorial");
     };
 };
@@ -75,6 +67,7 @@ function clickExitTutorial() {
     // overlay.setAttribute("style", "display: none");
     document.removeEventListener("keyup", exitTutorial);
     exitBtn.remove();
+    tipDiv.remove();
     console.log("exited tutorial");
     
 };
